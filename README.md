@@ -2,7 +2,7 @@
 
 This is a simple tutorial for initializing this Docker Dev environment.
 
-Make sure **Docker Desktop** and **VScode** with *C/C++ Extension Pack* are installed.
+Make sure **Docker Desktop** and **VScode** are installed.
 
 Open the **Docker Desktop**. Find and click the **Dev Environments** button, the **Create+** button, and the **Get started** button.
 
