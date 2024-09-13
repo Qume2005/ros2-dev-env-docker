@@ -23,6 +23,7 @@ RUN apt update -y && \
     apt-get clean -y && rm -rf /var/lib/apt/lists/*
 
 #setup ros2
+ENV ROS_DISTRO=humble
 RUN apt update -y && apt install -y locales && \
     locale-gen en_US en_US.UTF-8 && \
     update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8 && \
