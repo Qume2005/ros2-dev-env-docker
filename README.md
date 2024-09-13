@@ -14,7 +14,5 @@ https://github.com/Qume2005/ros2-dev-env-docker.git
 
 Click the **Continue** button.
 
-As the build finished, click the **Continue** button again, so you can open your development environment in vscode.
-
-Finally, just set your project name on the gui and select the file address of the project folder.
+As the build finished, click the **Continue** button again, so you can open your *Dev Environment* in *VScode*.
 
