@@ -1,0 +1,13 @@
+{
+  "name": "ROS 2 Dev Environment",
+  "image": "ros2_dev",
+  "runArgs": [
+    "--env", "DISPLAY=${localEnv:DISPLAY}",
+    "--env", "QT_X11_NO_MITSHM=1",
+    "--volume", "/tmp/.X11-unix:/tmp/.X11-unix:rw"
+  ],
+  "extensions": [
+    "ms-vscode.cpptools",
+    "ms-iot.vscode-ros"
+  ]
+}
