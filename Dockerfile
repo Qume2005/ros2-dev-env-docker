@@ -7,7 +7,6 @@ ENV DEBIAN_FRONTEND=noninteractive
 ENV TZ=Etc/UTC
 ENV ROS_DISTRO=humble
 
-# 初始化并安装必要的软件包
 RUN apt update -y && \
     apt install -y --no-install-recommends \
     tzdata \
@@ -22,7 +21,6 @@ RUN apt update -y && \
     dpkg-reconfigure --frontend noninteractive tzdata && \
     locale-gen en_US en_US.UTF-8 && \
     update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8 && \
-    # 设置 ROS2 源并安装 ROS2
     curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg && \
     echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(. /etc/os-release && echo $UBUNTU_CODENAME) main" | tee /etc/apt/sources.list.d/ros2.list > /dev/null && \
     apt update -y && \
@@ -32,10 +30,8 @@ RUN apt update -y && \
     ros-dev-tools \
     ros-humble-turtlesim \
     '~nros-humble-rqt*' && \
-    # 清理缓存
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
-# 设置 ROS2 环境
 RUN echo "source /opt/ros/humble/setup.bash" >> /etc/bash.bashrc
 
 ENTRYPOINT ["sleep", "infinity"]
