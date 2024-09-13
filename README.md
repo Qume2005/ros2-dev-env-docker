@@ -1,16 +1,20 @@
-# ros2-dev-env-docker
-This is a simple tutorial for initializing this Docker development environment.
+\# ros2-dev-env-docker
 
-The first step is to clone this repository to your project path, and you can also choose to rename the folder to whatever you want.
+This is a simple tutorial for initializing this Docker Dev environment.
+
+Make sure **Docker Desktop** and **VScode** are installed.
+
+Open the **Docker Desktop**. Find and click the **Dev Environments** button, the **Create+** button, and the **Get started** button.
+
+Set the **Name**, and paste this in the address bar⬇️
 
 ```bash
-cd /your/project/path/
-git clone https://github.com/Qume2005/ros2-dev-env-docker.git
+https://github.com/Qume2005/ros2-dev-env-docker.git
 ```
 
-The second step is to find and click the *Dev Environments* tab in Docker Desktop. Then click the *Create+* button.
+Click the **Continue** button.
+
+As the build finished, click the **Continue** button again, so you can open your development environment in vscode.
 
 Finally, just set your project name on the gui and select the file address of the project folder.
-
-
 
