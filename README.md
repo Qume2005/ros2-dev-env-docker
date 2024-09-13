@@ -1,4 +1,4 @@
-\# ros2-dev-env-docker
+# ros2-dev-env-docker
 
 This is a simple tutorial for initializing this Docker Dev environment.
 
