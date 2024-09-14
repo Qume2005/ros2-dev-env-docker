@@ -1,5 +1,5 @@
 services:
-  ros2_dev:
+  ros2-dev:
     entrypoint:
       - sleep
       - infinity
