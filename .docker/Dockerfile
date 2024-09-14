@@ -30,8 +30,7 @@ RUN apt update -y && \
     ros-dev-tools \
     ros-humble-turtlesim \
     '~nros-humble-rqt*' && \
-    apt-get clean && rm -rf /var/lib/apt/lists/*
-
-RUN echo "source /opt/ros/humble/setup.bash" >> /etc/bash.bashrc
+    apt-get clean && rm -rf /var/lib/apt/lists/* && \
+    echo "source /opt/ros/humble/setup.bash" >> /etc/bash.bashrc
 
 ENTRYPOINT ["sleep", "infinity"]
