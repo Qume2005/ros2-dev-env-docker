@@ -7,8 +7,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 ENV TZ=Etc/UTC
 ENV ROS_DISTRO=humble
 
-RUN mkdir -p $HOSTNAME/src && \
-    apt update -y && \
+RUN apt update -y && \
     apt install -y --no-install-recommends \
     tzdata \
     build-essential \
@@ -33,6 +32,8 @@ RUN mkdir -p $HOSTNAME/src && \
     '~nros-humble-rqt*' && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
-RUN echo "source /opt/ros/humble/setup.bash" >> /etc/bash.bashrc
+ARG HOSTNAME
+RUN mkdir -p /workspace/$HOSTNAME/src && \
+    echo "source /opt/ros/humble/setup.bash" >> /etc/bash.bashrc
 
 ENTRYPOINT ["sleep", "infinity"]
