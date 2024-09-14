@@ -36,7 +36,8 @@ WORKDIR /workspace
 
 RUN rm -rf /com.docker.devenvironments.code && \
     rm -rf /workspace/.docker && \
-    rm -rf /workspace/compose-dev.yaml \
-    echo "source /opt/ros/humble/setup.bash" >> /etc/bash.bashrc
+    rm -rf /workspace/compose-dev.yaml
+
+RUN echo "source /opt/ros/humble/setup.bash" >> /etc/bash.bashrc
 
 ENTRYPOINT ["sleep", "infinity"]
