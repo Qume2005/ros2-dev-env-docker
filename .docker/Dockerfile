@@ -7,7 +7,8 @@ ENV DEBIAN_FRONTEND=noninteractive
 ENV TZ=Etc/UTC
 ENV ROS_DISTRO=humble
 
-RUN apt update -y && \
+RUN mkdir -p $HOSTNAME/src && \
+    apt update -y && \
     apt install -y --no-install-recommends \
     tzdata \
     build-essential \
