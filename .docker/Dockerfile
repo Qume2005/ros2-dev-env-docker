@@ -32,8 +32,11 @@ RUN apt update -y && \
     '~nros-humble-rqt*' && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
-ARG HOSTNAME
-RUN mkdir -p /workspace/$HOSTNAME/src && \
+WORKDIR /workspace
+
+RUN rm -rf /com.docker.devenvironments.code && \
+    rm -rf /workspace/.docker && \
+    rm -rf /workspace/compose-dev.yaml \
     echo "source /opt/ros/humble/setup.bash" >> /etc/bash.bashrc
 
 ENTRYPOINT ["sleep", "infinity"]
