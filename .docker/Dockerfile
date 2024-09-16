@@ -33,6 +33,4 @@ RUN apt update -y && \
     apt-get clean && rm -rf /var/lib/apt/lists/* && \
     echo "source /opt/ros/humble/setup.bash" >> /etc/bash.bashrc
 
-RUN rm -f -r /com.docker.devenvironments.code
-
 ENTRYPOINT ["sleep", "infinity"]
